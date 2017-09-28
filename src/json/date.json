@@ -42,7 +42,7 @@
       {
         "title": "例子",
         "time": "2017年5月1日",
-        "img": "../../src/assets/date3.jpg",
+        "img": "/static/date3.jpg",
         "describe": "我是一个例子。。。。。"
       }
     ]
