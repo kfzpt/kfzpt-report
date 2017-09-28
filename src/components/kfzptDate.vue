@@ -7,7 +7,7 @@
         <span class="report_time">{{event.time}}</span>
         <img :src="event.img" class="report_img">
         <span class="report_desc">{{event.describe}}</span>
-        <div class="report_more" @mouseenter="enter" @mouseleave="leave">
+        <div class="report_more">
           <span>more</span>
         </div>
         <div class="bottomArrow"></div>
@@ -187,7 +187,7 @@
     text-align: center;
     color: black;
     position: absolute;
-    bottom: 60px;
+    bottom: 5px;
     width: 37px;
     height: 27px;
     line-height: 27px;
