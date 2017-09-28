@@ -55,7 +55,10 @@ export default {
 <style scoped>
 .report_footer {
   height: 40px;
-  color: #FFFFFFFF;
+  width: 100%;
+  line-height: 40px;
+  position: absolute;
+  bottom: 10px;
   background-image: url(../assets/play.png);
   background-repeat: no-repeat;
   background-position: center;

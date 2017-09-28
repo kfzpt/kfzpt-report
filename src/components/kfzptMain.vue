@@ -7,31 +7,32 @@
 </template>
 
 <script>
-import kfzptHeader from './kfzptHeader'
-import kfzptDate from './kfzptDate'
-import kfzptFooter from './kfzptFooter'
-export default {
-  name: 'report_main',
+  import kfzptHeader from './kfzptHeader'
+  import kfzptDate from './kfzptDate'
+  import kfzptFooter from './kfzptFooter'
+  export default {
+    name: 'report_main',
 
-  components: {
-    kfzptHeader: kfzptHeader,
-    kfzptDate: kfzptDate,
-    kfzptFooter: kfzptFooter
-  },
+    components: {
+      kfzptHeader: kfzptHeader,
+      kfzptDate: kfzptDate,
+      kfzptFooter: kfzptFooter
+    },
 
-  data () {
-    return {
+    data () {
+      return {}
     }
   }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.report_main {
-  background-image: url(../assets/bgmain.jpg);
-  background-repeat: round;
-  width: 100%;
-  height: 760px;
-}
+  .report_main {
+    overflow: hidden;
+    background-image: url(../assets/bgmain.jpg);
+    background-size: 100% 100%;
+    width: 100%;
+    height: 760px;
+    position: relative;
+  }
 </style>
