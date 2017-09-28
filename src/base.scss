@@ -1,0 +1,155 @@
+*,*:before, *:after {
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    /*font-family:"MicrosoftYaHei";*/
+}
+
+*:focus { outline: none; }
+
+html {
+    font-size: 16px;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.bounce-transition {
+    display: inline-block;
+}
+.bounce-leave {
+    animation: bounce-out .3s;
+    -webkit-animation: bounce-out .3s;
+}
+@keyframes bounce-out {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+@-webkit-keyframes bounce-out {
+    0% {
+        -webkit-transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.5);
+    }
+    100% {
+        -webkit-transform: scale(0);
+    }
+}
+@keyframes move-up {
+    0% {
+        bottom: 30px;
+    }
+    100% {
+        bottom: 90px;
+    }
+}
+@-webkit-keyframes move-up {
+    0% {
+        bottom: 30px;
+    }
+    100% {
+        bottom: 90px;
+    }
+}
+@keyframes rot {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes rot {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+section {
+    position: relative;
+    background-color: #fff;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+
+#auto {
+    background: #fff;
+    padding-top: 5px;
+}
+#auto div {
+    font: 14px/25px arial;
+    height: 1.2rem;
+    padding: 0 8px;
+    cursor: pointer;
+}
+#auto .addText {
+    float: right;
+    width: 10%;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    color: #999;
+}
+#auto .suggText {
+    width: 90%;
+    display: inline-block;
+    color: #333;
+}
+#auto .suggText b {
+    font-weight: normal;
+    color: #999;
+}
+#pagesZone {
+    background: #E3E1E2;
+    font-size: 0;
+    display: none;
+    position: absolute;
+    top: 2.1rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1;
+}
+#pagesZone span.engi {
+    padding-left: 2%;
+    color: #333;
+    font-size: 9pt;
+    display: inline-block;
+    line-height: 2rem;
+    vertical-align: top;
+}
+#pagesZone img {
+    padding: 0.5rem 0;
+    width: 1rem;
+    margin: 0 1.5%;
+}
+#pagesZone .close {
+    background: #9f9d9e;
+    color: #fff;
+    text-align: center;
+    float: right;
+    margin: 0;
+    line-height: 2rem;
+    font-size: 14px;
+    width: 3rem;
+}
