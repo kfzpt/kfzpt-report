@@ -1,31 +1,33 @@
 <template>
   <div class="box">
     <div class="report_date" id="report_date" @mousedown="onmousedown" @mousemove="onmousemove" @mouseup="onmouseup">
-      <div class="date_info" v-bind:class="{'big_info': date.flag == 1}" v-for="date in dates" track-by="$index">
-        <div class="date_event" v-for="event in date.events"
-             v-bind:class="{'pos_top': event.position == 0, 'pos_mid': event.position == 1, 'pos_bot': event.position == 2}">
-          <span class="report_title" v-show="event.title != null && event.title != ''">{{event.title}}</span>
-          <span class="report_time" v-show="event.time != null && event.time != ''">{{event.time}}</span>
-          <img :src="event.img" v-show="event.img != null && event.img != ''" class="report_img">
-          <li class="report_desc" v-for="describe in event.describes">{{describe}}</li>
-          <div class="report_more" @click="openMore">
-            <span>more</span>
+      <div class="date_info" v-bind:class="{'big_info': date.flag == 1}" v-for="(date, index) in dates" track-by="$index">
+        <div v-if="date.events && date.events.hasMoreData != ''">
+          <div class="date_event" v-for="event in date.events"
+               v-bind:class="{'pos_top': event.position == 0, 'pos_mid': event.position == 1, 'pos_bot': event.position == 2}">
+            <span class="report_title" v-show="event.title != null && event.title != ''">{{event.title}}</span>
+            <span class="report_time" v-show="event.time != null && event.time != ''">{{event.time}}</span>
+            <img :src="event.img" v-show="event.img != null && event.img != ''" class="report_img">
+            <li class="report_desc" v-for="describe in event.describes">{{describe}}</li>
+            <a class="report_more" @click="openMore(index)">
+              <span>more</span>
+            </a>
+            <div class="bottomArrow"></div>
           </div>
-          <div class="bottomArrow"></div>
         </div>
         <div class="date_num" v-bind:class="{'big_num': date.flag == 1}">
           <span>{{date.text}}</span>
         </div>
       </div>
     </div>
-    <kfzptMore @close="closeMore" v-if="showMore"></kfzptMore>
+    <kfzptMore @close="closeMore" v-if="showMore" :sequence="parentIndex"></kfzptMore>
   </div>
 </template>
 
 <script>
   import kfzptMore from './kfzptMore'
-
-  var appData = require('../json/date.json')
+  import appData from '../json/appDetail'
+  import toolData from '../json/date.json'
   export default {
     name: 'report_date',
     components: {
@@ -34,10 +36,12 @@
     data () {
       return {
         showMore: false,
-        dates: appData,
+        dates: toolData,
+        appList: appData,
         startMove: 0,
         startX: 0,
-        startTranslate: 0
+        startTranslate: 0,
+        parentIndex: ''
       }
     },
     methods: {
@@ -68,8 +72,11 @@
       onmouseup (event) {
         this.startMove = 0
       },
-      openMore () {
+      openMore (index) {
         this.showMore = true
+        let eventsList = this.dates[index].events[0]
+        this.parentIndex = eventsList.hasMoreData
+        console.log('aaaa', this.parentIndex)
       },
       closeMore () {
         this.showMore = false
@@ -164,22 +171,30 @@
   }
 
   .report_more {
-    width: 57px;
+    width: 95%;
     height: 18px;
     background-image: url(../assets/more02.png);
     background-repeat: no-repeat;
-    margin-left: 70%;
-    padding-bottom: 5px;
+    background-position: top right;
+    background-size:57px 22px;
+    padding: 3px 0;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    z-index: 999;
   }
 
   .report_more span {
-    line-height: 18px;
+    line-height: 15px;
     font-size: 11px;
     color: #fff;
-    margin-left: -10px;
+    margin-right: 20px;
+    text-align: right;
   }
 
-  .report_more:hover {
+  .box .report_date .date_info .date_event .report_more:hover {
     cursor: pointer;
     background-image: url(../assets/more01.png);
     background-repeat: no-repeat;
