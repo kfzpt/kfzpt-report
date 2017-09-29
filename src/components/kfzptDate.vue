@@ -1,30 +1,39 @@
 <template>
-  <div class="report_date" id="report_date" @mousedown="onmousedown" @mousemove="onmousemove" @mouseup="onmouseup">
-    <div class="date_info" v-bind:class="{'big_info': date.flag == 1}" v-for="date in dates" track-by="$index">
-      <div class="date_event" v-for="event in date.events"
-           v-bind:class="{'pos_top': date.position == 1, 'pos_mid': date.position == 2, 'pos_bot': date.position == 3}">
-        <span class="report_title">{{event.title}}</span>
-        <span class="report_time">{{event.time}}</span>
-        <img :src="event.img" class="report_img">
-        <span class="report_desc">{{event.describe}}</span>
-        <div class="report_more">
-          <span>more</span>
+  <div class="box">
+    <div class="report_date" id="report_date" @mousedown="onmousedown" @mousemove="onmousemove" @mouseup="onmouseup">
+      <div class="date_info" v-bind:class="{'big_info': date.flag == 1}" v-for="date in dates" track-by="$index">
+        <div class="date_event" v-for="event in date.events"
+             v-bind:class="{'pos_top': date.position == 1, 'pos_mid': date.position == 2, 'pos_bot': date.position == 3}">
+          <span class="report_title">{{event.title}}</span>
+          <span class="report_time">{{event.time}}</span>
+          <img :src="event.img" class="report_img">
+          <span class="report_desc">{{event.describe}}</span>
+          <div class="report_more" @click="openMore">
+            <span>more</span>
+          </div>
+          <div class="bottomArrow"></div>
         </div>
-        <div class="bottomArrow"></div>
-      </div>
-      <div class="date_num" v-bind:class="{'big_num': date.flag == 1}">
-        <span>{{date.text}}</span>
+        <div class="date_num" v-bind:class="{'big_num': date.flag == 1}">
+          <span>{{date.text}}</span>
+        </div>
       </div>
     </div>
+    <kfzptMore @close="closeMore" v-if="showMore"></kfzptMore>
   </div>
 </template>
 
 <script>
+  import kfzptMore from './kfzptMore'
+
   var appData = require('../json/date.json')
   export default {
     name: 'report_date',
+    components: {
+      kfzptMore: kfzptMore
+    },
     data () {
       return {
+        showMore: false,
         dates: appData,
         startMove: 0,
         startX: 0,
@@ -59,6 +68,12 @@
       onmouseup (event) {
         this.startMove = 0
       },
+      openMore () {
+        this.showMore = true
+      },
+      closeMore () {
+        this.showMore = false
+      },
       setTitleTransform (distance) {
         var navdrag = document.getElementById('report_date')
         var touchDelta = distance + this.startTranslate
@@ -73,6 +88,11 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .box {
+    width: 100%;
+    height: 760px;
+    position: relative;
+  }
   .report_date {
     width: 8000px;
     height: 76%;
