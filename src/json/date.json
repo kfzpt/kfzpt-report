@@ -2,12 +2,40 @@
   {
     "text": "26日",
     "flag": 0,
-    "events": []
+    "events": [
+      {
+        "position": 0,
+        "title": "部门职责",
+        "time": "",
+        "img": "",
+        "describes": [
+          "1、设计和推动toon平台应用体系的建设和规范",
+          "2、以应用引擎为基础为toon平台应用的开发提供标准和多种开发引擎支持",
+          "3、建设一个成熟，稳定，安全的开放平台为toon平台应用开发者提供服务",
+          "4、建设统一的toon平台应用库，对toon平台的应用作统一的管理和规划，提供开放的应用服务资源"
+        ]
+      }
+    ]
   },
   {
     "text": "27日",
     "flag": 0,
-    "events": []
+    "events": [
+      {
+        "position": 2,
+        "title": "人员构成",
+        "time": "",
+        "img": "",
+        "describes": [
+          "负责人：薛东升",
+          "Web 前端团队：张漓，王改新，王瑞莹",
+          "Android 团队：孙俊，汤铠丞",
+          "iOS 团队：范会博，刘前",
+          "Java 团队：赵腾，齐定，刘娜，郭吉祥，高建群",
+          "技术支持：吴江"
+        ]
+      }
+    ]
   },
   {
     "text": "28日",
@@ -38,19 +66,20 @@
     "text": "3日",
     "flag": 0,
     "position": 3,
-    "events": [
-      {
-        "title": "例子",
-        "time": "2017年5月1日",
-        "img": "/static/date3.jpg",
-        "describe": "我是一个例子。。。。。"
-      }
-    ]
+    "events": []
   },
   {
     "text": "4日",
     "flag": 0,
-    "events": []
+    "events": [
+      {
+        "position": 1,
+        "title": "例子",
+        "time": "2017年5月1日",
+        "img": "/static/date3.jpg",
+        "describes": []
+      }
+    ]
   },
   {
     "text": "5日",
@@ -200,14 +229,7 @@
   {
     "text": "3日",
     "flag": 0,
-    "events": [
-      {
-        "title": "例子",
-        "time": "2017年5月1日",
-        "img": "./assets/date3.jpg",
-        "describe": "我是一个例子。。。。。"
-      }
-    ]
+    "events": []
   },
   {
     "text": "4日",
@@ -362,14 +384,7 @@
   {
     "text": "3日",
     "flag": 0,
-    "events": [
-      {
-        "title": "例子",
-        "time": "2017年5月1日",
-        "img": "./assets/date3.jpg",
-        "describe": "我是一个例子。。。。。"
-      }
-    ]
+    "events": []
   },
   {
     "text": "4日",
@@ -519,14 +534,7 @@
   {
     "text": "3日",
     "flag": 0,
-    "events": [
-      {
-        "title": "例子",
-        "time": "2017年5月1日",
-        "img": "./assets/date3.jpg",
-        "describe": "我是一个例子。。。。。"
-      }
-    ]
+    "events": []
   },
   {
     "text": "4日",
@@ -681,14 +689,7 @@
   {
     "text": "3日",
     "flag": 0,
-    "events": [
-      {
-        "title": "例子",
-        "time": "2017年5月1日",
-        "img": "./assets/date3.jpg",
-        "describe": "我是一个例子。。。。。"
-      }
-    ]
+    "events": []
   },
   {
     "text": "4日",
@@ -838,14 +839,7 @@
   {
     "text": "3日",
     "flag": 0,
-    "events": [
-      {
-        "title": "例子",
-        "time": "2017年5月1日",
-        "img": "./assets/date3.jpg",
-        "describe": "我是一个例子。。。。。"
-      }
-    ]
+    "events": []
   },
   {
     "text": "4日",
@@ -1000,14 +994,7 @@
   {
     "text": "3日",
     "flag": 0,
-    "events": [
-      {
-        "title": "例子",
-        "time": "2017年5月1日",
-        "img": "./assets/date3.jpg",
-        "describe": "我是一个例子。。。。。"
-      }
-    ]
+    "events": []
   },
   {
     "text": "4日",

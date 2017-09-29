@@ -3,11 +3,11 @@
     <div class="report_date" id="report_date" @mousedown="onmousedown" @mousemove="onmousemove" @mouseup="onmouseup">
       <div class="date_info" v-bind:class="{'big_info': date.flag == 1}" v-for="date in dates" track-by="$index">
         <div class="date_event" v-for="event in date.events"
-             v-bind:class="{'pos_top': date.position == 1, 'pos_mid': date.position == 2, 'pos_bot': date.position == 3}">
-          <span class="report_title">{{event.title}}</span>
-          <span class="report_time">{{event.time}}</span>
-          <img :src="event.img" class="report_img">
-          <span class="report_desc">{{event.describe}}</span>
+             v-bind:class="{'pos_top': event.position == 0, 'pos_mid': event.position == 1, 'pos_bot': event.position == 2}">
+          <span class="report_title" v-show="event.title != null && event.title != ''">{{event.title}}</span>
+          <span class="report_time" v-show="event.time != null && event.time != ''">{{event.time}}</span>
+          <img :src="event.img" v-show="event.img != null && event.img != ''" class="report_img">
+          <li class="report_desc" v-for="describe in event.describes">{{describe}}</li>
           <div class="report_more" @click="openMore">
             <span>more</span>
           </div>
@@ -100,7 +100,7 @@
   }
 
   .date_info {
-    width: 37px;
+    width: 50px;
     display: inline-block;
     float: left;
     height: 100%;
@@ -188,19 +188,19 @@
   .pos_top {
     position: absolute;
     top: 0;
-    left: -90px;
+    width: 400px;
   }
 
   .pos_mid {
     position: absolute;
-    top: 100px;
-    left: -90px;
+    top: 50px;
+    width: 200px;
   }
 
   .pos_bot {
     position: absolute;
-    top: 200px;
-    left: -90px;
+    top: 250px;
+    width: 300px;
   }
 
   .date_num {
@@ -208,7 +208,7 @@
     color: black;
     position: absolute;
     bottom: 5px;
-    width: 37px;
+    width: 50px;
     height: 27px;
     line-height: 27px;
     word-wrap: break-word;
@@ -216,20 +216,25 @@
   }
 
   .big_info {
-    width: 50px;
+    width: 70px;
     line-height: 37px;
   }
 
   .big_num {
     background-color: red;
     opacity: 0.8;
-    width: 50px;
+    width: 70px;
     height: 37px;
     line-height: 37px;
   }
 
   h1 {
     font-weight: normal;
+  }
+
+  li {
+    font-weight: normal;
+    padding-bottom: 6px !important;
   }
 
   .bottomArrow {
