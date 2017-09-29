@@ -2,10 +2,10 @@
   <div class="report_date" id="report_date" @mousedown="onmousedown" @mousemove="onmousemove" @mouseup="onmouseup">
     <div class="date_info" v-bind:class="{'big_info': date.flag == 1}" v-for="date in dates" track-by="$index">
       <div class="date_event" v-for="event in date.events"
-           v-bind:class="{'pos_top': event.position == 0, 'pos_mid': event.position == 1, 'pos_bot': event.position == 2}">
+           v-bind:class="{'pos_0': event.position == 0, 'pos_1': event.position == 1, 'pos_2': event.position == 2, 'pos_3': event.position == 3, 'pos_4': event.position == 4, 'pos_5': event.position == 5, 'pos_6': event.position == 6}">
         <span class="report_title" v-show="event.title != null && event.title != ''">{{event.title}}</span>
         <span class="report_time" v-show="event.time != null && event.time != ''">{{event.time}}</span>
-        <img :src="event.img" v-show="event.img != null && event.img != ''" class="report_img">
+        <img :src="event.img" v-bind:class="{'img_left': event.format == 1, 'img_left_thin': event.format == 2}" v-show="event.img != null && event.img != ''" class="report_img">
         <li class="report_desc" v-for="describe in event.describes">{{describe}}</li>
         <div class="report_more">
           <span>more</span>
@@ -129,8 +129,22 @@
 
   .report_img {
     width: 200px;
-    height: 142px;
+    height: 100%;
     margin: auto;
+  }
+
+  .img_left {
+    float:left;    
+    top: 0;
+    width: 200px;
+    margin: 5px;
+  }
+
+  .img_left_thin {
+    float:left;    
+    top: 0;
+    width: 150px;
+    margin: 5px;
   }
 
   .report_desc {
@@ -165,22 +179,46 @@
     background-repeat: no-repeat;
   }
 
-  .pos_top {
+  .pos_0 {
     position: absolute;
     top: 0;
-    width: 400px;
+    width: 380px;
   }
 
-  .pos_mid {
+  .pos_1 {
     position: absolute;
     top: 50px;
     width: 200px;
   }
 
-  .pos_bot {
+  .pos_2 {
     position: absolute;
     top: 250px;
-    width: 300px;
+    width: 320px;
+  }
+
+  .pos_3 {
+    position: absolute;
+    top: 0;
+    width: 450px;
+  }
+
+  .pos_4 {
+    position: absolute;
+    top: 50px;
+    width: 450px;
+  }
+
+  .pos_5 {
+    position: absolute;
+    top: 300px;
+    width: 450px;
+  }
+
+  .pos_6 {
+    position: absolute;
+    top: 0;
+    width: 320px;
   }
 
   .date_num {
@@ -215,6 +253,7 @@
   li {
     font-weight: normal;
     padding-bottom: 6px !important;
+    list-style-type:none;
   }
 
   .bottomArrow {

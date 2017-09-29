@@ -5,6 +5,7 @@
     "events": [
       {
         "position": 0,
+        "format": 0,
         "title": "部门职责",
         "time": "",
         "img": "",
@@ -23,6 +24,7 @@
     "events": [
       {
         "position": 2,
+        "format": 0,
         "title": "人员构成",
         "time": "",
         "img": "",
@@ -66,18 +68,503 @@
     "text": "3日",
     "flag": 0,
     "position": 3,
+    "events": [
+      {
+        "position": 1,
+        "format": 0,
+        "title": "toon权威解读",
+        "time": "2017年7月5日",
+        "img": "/static/date1.jpeg",
+        "describes": []
+      }
+    ]
+  },
+  {
+    "text": "4日",
+    "flag": 0,
     "events": []
+  },
+  {
+    "text": "5日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "6日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "7日",
+    "flag": 0,
+    "events": [
+      {
+        "position": 2,
+        "format": 0,
+        "title": "",
+        "time": "",
+        "img": "",
+        "describes": [
+          "1、完成应用开放平台对外架构设计",
+          "2、toon平台应用引擎代码架构",
+          "3、toon应用开放平台方案",
+          "4、接手toon协议，router模块和mwap模块",
+          "5、交接活动模块，参与活动需求和设计",
+          "6、toon平台分享落地页开发测试"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "8日",
+    "flag": 0,
+    "events": [
+      {
+        "position": 3,
+        "format": 1,
+        "title": "",
+        "time": "",
+        "img": "/static/date2.png",
+        "describes": [
+          "1、开始实现多引擎集成方案的架构",
+          "2、集成JSBridge，实现HTML和native之间的交互",
+          "3、调研Weex应用开发和集成方式",
+          "4、提供多引擎，widget，以及流应用实现demo"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "9日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "10日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "11日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "12日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "13日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "14日",
+    "flag": 0,
+    "events": [
+      {
+        "position": 5,
+        "format": 1,
+        "title": "",
+        "time": "",
+        "img": "/static/date3.png",
+        "describes": [
+          "1、应用引擎toongine第一阶段开发完成，实现流应用支持",
+          "2、应用引擎模块通过安全检测",
+          "3、开始新版活动设计，交接赞赞活动代码",
+          "4、梳理toon协议，为应用开发方提供日历接口，协助会议应用改版"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "15日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "16日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "17日",
+    "flag": 0,
+    "events": [
+      {
+        "position": 6,
+        "format": 2,
+        "title": "",
+        "time": "",
+        "img": "/static/date4.jpeg",
+        "describes": [
+          "1、应用引擎toongine正式出现在toon基线3.5.0的代码中",
+          "2、新版活动在toon基线3.5.0正式上线，采用流应用形式，支持在线更新",
+          "3、活动后台部署到测试环境",
+          "4、了解toon如何抽象构造移动世界"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "18日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "19日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "20日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "21日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "22日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "23日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "24日",
+    "flag": 0,
+    "events": [
+      {
+        "position": 0,
+        "format": 0,
+        "title": "开发者平台",
+        "time": "",
+        "img": "/static/date5.jpg",
+        "describes": [
+          "1、开发者平台整体UI进行了升级，页面更简洁，操作更直观。",
+          "2、新增了开发者身份验证功能，开发者须完善个人信息，信息验证通过后的开发者才可以在开发者平台提交应用审核。请开发者登录开发者平台后在“开发者资料”设置页进行信息完善和邮箱验证。",
+          "3、新增了平台公告和开发者通知，便于第一时间将开发者平台的变更信息及应用的审核状态通知到开发者。",
+          "4、新增了toon协议demo示例，便于开发者调试使用toon协议。可在“资源中心”-“开发示例”进行查看。",
+          "5、开发者可针对应用，邀请开发协助者，便于多人共同开发应用、测试、及应用转移。",
+          "6、应用协助邀请及使用人指定，新增了toon手机端消息，增强了被邀请者的知情权，用户可接受或拒绝邀请。"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "25日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "26日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "27日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "28日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "29日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "30日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "31日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "八月",
+    "flag": 1,
+    "events": [
+      {
+        "position": 1,
+        "format": 0,
+        "title": "",
+        "time": "",
+        "img": "/static/date6.png",
+        "describes": [
+          "1、完善应用引擎相关的应用管理部分模块设计",
+          "2、帮助定制通解决http到https的改造问题",
+          "3、为定制通提供分享下载落地页服务",
+          "4、向应用开发方推广应用引擎toongine的使用方式和优点，收集用户需求"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "2日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "3日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "4日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "5日",
+    "flag": 0,
+    "events": [
+      {
+        "position": 0,
+        "format": 0,
+        "title": "",
+        "time": "",
+        "img": "/static/date7.png",
+        "describes": [
+          "1、基于新应用引擎开发的H5流应用活动进行产品验收测试",
+          "2、完善应用引擎，增加对应用开发方的支持，设计为应用开发方提供PC端，手机端的开发调试工具",
+          "3、增加应用引擎API接口定义，对原有toon协议进行全面覆盖",
+          "4、考虑应用引擎接口对PC平台的兼容技术实现方案"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "6日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "7日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "8日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "9日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "10日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "11日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "12日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "13日",
+    "flag": 0,
+    "events": [
+      {
+        "position": 4,
+        "format": 1,
+        "title": "开发者平台优化",
+        "time": "",
+        "img": "",
+        "describes": [
+          "1、增加留言功能，开发者可以在线给平台留言反馈",
+          "2、对开发者可创建的应用数量进行了限制，超出数量后将无法创建新应用",
+          "3、提交审核后可自行撤回审核",
+          "4、对应用增加筛选，便于了解哪些应用是自己创建，哪些是被邀请参与协作",
+          "5、增加了扫码登录。可以使用toon直接扫码登录开发者平台",
+          "6、增加了消息权限审核通知，平台会第一时间将消息权限审核结果通过toon消息通知到开发者"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "14日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "15日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "16日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "17日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "18日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "19日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "20日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "21日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "22日",
+    "flag": 0,
+    "events": [
+      {
+        "position": 0,
+        "format": 0,
+        "title": "",
+        "time": "",
+        "img": "/static/date8.png",
+        "describes": [
+          "1、完成toon3.5上线工作",
+          "2、完成toon协议可用性检测",
+          "3、整理目前为应用提供的toon协议，包括测试部门的测试用例，开发者平台部的对外文档，开发者平台测试应用，mwap代码内的函数说明，以及各部门反馈的使用状态",
+          "4、协助福州通项目提供开发者平台相关的对外的标准文档规范",
+          "5、同步应用引擎iOS和Android版API覆盖进度，准备应用引擎API测试用例，增加支持API列表",
+          "6、应用引擎部和开发者平台部正式合并为新的开发者平台部，为三年平台，两年应用的到来做准备"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "23日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "24日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "25日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "26日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "27日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "28日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "29日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "30日",
+    "flag": 0,
+    "events": [
+      {
+        "position": 1,
+        "format": 0,
+        "title": "互联三周年生日会",
+        "time": "2017年8月26日",
+        "img": "/static/date9.jpeg",
+        "describes": []
+      }
+    ]
+  },
+  {
+    "text": "31日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "九月",
+    "flag": 1,
+    "events": []
+  },
+  {
+    "text": "2日",
+    "flag": 0,
+    "events": []
+  },
+  {
+    "text": "3日",
+    "flag": 0,
+    "events": [
+      {
+        "position": 2,
+        "format": 0,
+        "title": "",
+        "time": "",
+        "img": "/static/date10.png",
+        "describes": [
+          "1、设计应用oauth认证流程本地化方案",
+          "2、设计开发者平台、应用库输出方案",
+          "3、规划开发者平台用户注册流程，和产品一起设计toon开放平台改版方案",
+          "4、接管应用安装和运行模块",
+          "5、接管应用安装和运行模块"
+        ]
+      }
+    ]
   },
   {
     "text": "4日",
     "flag": 0,
     "events": [
       {
-        "position": 1,
-        "title": "例子",
-        "time": "2017年5月1日",
-        "img": "/static/date3.jpg",
-        "describes": []
+        "position": 3,
+        "format": 1,
+        "title": "",
+        "time": "",
+        "img": "",
+        "describes": [
+          "1、设计开发者平台文档梳理目录结构",
+          "2、和刘毅总团队讨论政务通开发者平台定制部署需求",
+          "3、和toB人员讨论组织平台OAuth接口本地调用方式实现方案，讨论认证描述文件内容规范",
+          "4、提供组织连接平台相关开发者平台和应用库接口",
+          "5、管理后台优化，添加发送通知的功能，审核通过自动发布",
+          "6、新增实名认证应用类型，增加接口测试验证工具和经典案例展示"
+        ]
       }
     ]
   },
@@ -124,7 +611,16 @@
   {
     "text": "13日",
     "flag": 0,
-    "events": []
+    "events": [
+      {
+        "position": 1,
+        "format": 0,
+        "title": "思源大讲堂",
+        "time": "2017年9月16日",
+        "img": "/static/date11.jpeg",
+        "describes": []
+      }
+    ]
   },
   {
     "text": "14日",
@@ -144,7 +640,23 @@
   {
     "text": "17日",
     "flag": 0,
-    "events": []
+    "events": [
+      {
+        "position": 3,
+        "format": 1,
+        "title": "",
+        "time": "",
+        "img": "/static/date12.jpeg",
+        "describes": [
+          "1、完成手机端toongine API调试工具的开发",
+          "2、完成部分接口效率优化，调用接口响应时间优化",
+          "3、开发者平台对外文档审察和内容整理",
+          "4、协调北京通卡证需求解决方案，沟通门城通-旅游支付问题，支持门城通封版，协助解决老版本toon协议调用遗留问题",
+          "5、梳理现有应用库表结构，应用库接口，和开发者平台服务接口",
+          "6、完成toon基线3.6.0开发任务"
+        ]
+      }
+    ]
   },
   {
     "text": "18日",
@@ -189,7 +701,16 @@
   {
     "text": "26日",
     "flag": 0,
-    "events": []
+    "events": [
+      {
+        "position": 1,
+        "format": 0,
+        "title": "参加线下分享",
+        "time": "2017年9月21日",
+        "img": "/static/date13.jpeg",
+        "describes": []
+      }
+    ]
   },
   {
     "text": "27日",
@@ -209,317 +730,16 @@
   {
     "text": "30日",
     "flag": 0,
-    "events": []
-  },
-  {
-    "text": "31日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "八月",
-    "flag": 1,
-    "events": []
-  },
-  {
-    "text": "2日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "3日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "4日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "5日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "6日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "7日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "8日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "9日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "10日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "11日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "12日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "13日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "14日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "15日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "16日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "17日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "18日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "19日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "20日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "21日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "22日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "23日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "24日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "25日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "26日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "27日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "28日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "29日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "30日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "31日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "九月",
-    "flag": 1,
-    "events": []
-  },
-  {
-    "text": "2日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "3日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "4日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "5日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "6日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "7日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "8日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "9日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "10日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "11日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "12日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "13日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "14日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "15日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "16日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "17日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "18日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "19日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "20日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "21日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "22日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "23日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "24日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "25日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "26日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "27日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "28日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "29日",
-    "flag": 0,
-    "events": []
-  },
-  {
-    "text": "30日",
-    "flag": 0,
-    "events": []
+    "events": [
+      {
+        "position": 0,
+        "format": 0,
+        "title": "对外文档网站上线",
+        "time": "2017年9月21日",
+        "img": "/static/date14.jpg",
+        "describes": []
+      }
+    ]
   },
   {
     "text": "十月",
