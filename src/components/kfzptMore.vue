@@ -16,27 +16,27 @@
 </template>
 
 <script>
-  import appData from '../json/appDetail.json'
+  import moreData from '../json/more.json'
   export default {
     name: 'report_more',
     data () {
       return {
         msg: '开发者平台部 Q3 汇报',
         moreIndex: 0,
-        appData: appData,
+        moreData: moreData,
         isFull: false,
         appList: {}
       }
     },
     props: ['sequence'],
     created () {
-      for (let i = 0; i < appData.length; i++) {
-        if (appData[i].index === this.sequence) {
+      for (let i = 0; i < moreData.length; i++) {
+        if (moreData[i].index === this.sequence) {
           this.moreIndex = i
           break
         }
       }
-      this.appList = appData[this.moreIndex]
+      this.appList = moreData[this.moreIndex]
       console.log(this.appList)
     },
     methods: {

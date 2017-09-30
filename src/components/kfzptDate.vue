@@ -26,8 +26,8 @@
 
 <script>
   import kfzptMore from './kfzptMore'
-  import appData from '../json/appDetail.json'
-  import toolData from '../json/date.json'
+  import moreData from '../json/more.json'
+  import appData from '../json/date.json'
   export default {
     name: 'report_date',
     components: {
@@ -36,8 +36,8 @@
     data () {
       return {
         showMore: false,
-        dates: toolData,
-        appList: appData,
+        dates: appData,
+        appList: moreData,
         startMove: 0,
         startX: 0,
         startTranslate: 0,
