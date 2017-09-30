@@ -5,9 +5,12 @@
       <div class="more-contain">
         <span class="more-title" v-show="appList.title != null && appList.title != ''">{{ appList.title }}</span>
         <span class="more-time" v-show="appList.time != null && appList.time != ''">{{ appList.time }}</span>
-        <img :src="appList.img" class="more-img" v-show="appList.img != null && appList.img != ''">
+        <img :src="appList.img" class="more-img" v-show="appList.img != null && appList.img != ''" @click="makeFull">
         <li class="more-content" v-for="content in appList.contents">{{content}}</li>
       </div>
+    </div>
+    <div class="isFull" v-if="isFull" @click="makeFull">
+      <img :src="appList.img" class="fullScreen" v-show="appList.img != null && appList.img != ''">
     </div>
   </div>
 </template>
@@ -21,6 +24,7 @@
         msg: '开发者平台部 Q3 汇报',
         moreIndex: 0,
         appData: appData,
+        isFull: false,
         appList: {}
       }
     },
@@ -38,6 +42,9 @@
     methods: {
       delMore () {
         this.$emit('close')
+      },
+      makeFull () {
+        this.isFull = !this.isFull
       }
     }
   }
@@ -138,6 +145,7 @@
     width: 48%;
     float: left;
     padding-right: 15px;
+    cursor: pointer;
   }
 
   .more-content {
@@ -149,5 +157,20 @@
     color: #fff;
     float: left;
     text-align: left;
+  }
+  .isFull {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+  .fullScreen {
+    cursor: pointer;
+    height: 100%;
+    display: block;
+    margin: auto;
   }
 </style>
