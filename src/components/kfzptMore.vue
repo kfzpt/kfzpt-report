@@ -6,7 +6,9 @@
         <span class="more-title" v-show="appList.title != null && appList.title != ''">{{ appList.title }}</span>
         <span class="more-time" v-show="appList.time != null && appList.time != ''">{{ appList.time }}</span>
         <img :src="appList.img" class="more-img" v-show="appList.img != null && appList.img != ''" @click="makeFull">
-        <li class="more-content" v-for="content in appList.contents">{{content}}</li>
+        <li class="more-content" v-for="content in appList.contents"
+            v-bind:class="{'fullContent': appList.img == null || appList.img == ''}">{{content}}
+        </li>
       </div>
     </div>
     <div class="isFull" v-if="isFull" @click="makeFull">
@@ -83,7 +85,7 @@
 
   #next {
     position: absolute;
-    right:0;
+    right: 0;
     display: inline-block;
     height: 30%;
 
@@ -158,6 +160,16 @@
     float: left;
     text-align: left;
   }
+
+  .fullContent {
+    width: 100%;
+    font-family: Arial;
+    word-wrap: break-word;
+    font-size: 18px;
+    color: #fff;
+    text-align: left;
+  }
+
   .isFull {
     width: 100%;
     height: 100%;
@@ -167,6 +179,7 @@
     left: 0;
     z-index: 999;
   }
+
   .fullScreen {
     cursor: pointer;
     height: 100%;
