@@ -26,7 +26,7 @@
 
 <script>
   import kfzptMore from './kfzptMore'
-  import appData from '../json/appDetail'
+  import appData from '../json/appDetail.json'
   import toolData from '../json/date.json'
   export default {
     name: 'report_date',
