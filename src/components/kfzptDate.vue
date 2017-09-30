@@ -1,19 +1,19 @@
 <template>
   <div class="box">
     <div class="report_date" id="report_date" @mousedown="onmousedown" @mousemove="onmousemove" @mouseup="onmouseup">
-      <div class="date_info" v-bind:class="{'big_info': date.flag == 1}" v-for="(date, index) in dates" track-by="$index">
-        <div v-if="date.events && date.events.hasMoreData != ''">
-          <div class="date_event" v-for="event in date.events"
-               v-bind:class="{'pos_0': event.position == 0, 'pos_1': event.position == 1, 'pos_2': event.position == 2, 'pos_3': event.position == 3, 'pos_4': event.position == 4, 'pos_5': event.position == 5, 'pos_6': event.position == 6}">
+      <div class="date_info" v-bind:class="{'big_info': date.flag == 1}" v-for="(date, index) in dates"
+           track-by="$index">
+        <div class="date_event" v-for="event in date.events"
+             v-bind:class="{'pos_0': event.position == 0, 'pos_1': event.position == 1, 'pos_2': event.position == 2, 'pos_3': event.position == 3, 'pos_4': event.position == 4, 'pos_5': event.position == 5, 'pos_6': event.position == 6}">
           <span class="report_title" v-show="event.title != null && event.title != ''">{{event.title}}</span>
-            <span class="report_time" v-show="event.time != null && event.time != ''">{{event.time}}</span>
-            <img :src="event.img" v-bind:class="{'img_left': event.format == 1, 'img_left_thin': event.format == 2}" v-show="event.img != null && event.img != ''" class="report_img">
-            <li class="report_desc" v-for="describe in event.describes">{{describe}}</li>
-            <a class="report_more" @click="openMore(index)">
-              <span>more</span>
-            </a>
-            <div class="bottomArrow"></div>
-          </div>
+          <span class="report_time" v-show="event.time != null && event.time != ''">{{event.time}}</span>
+          <img :src="event.img" v-bind:class="{'img_left': event.format == 1, 'img_left_thin': event.format == 2}"
+               v-show="event.img != null && event.img != ''" class="report_img">
+          <li class="report_desc" v-for="describe in event.describes">{{describe}}</li>
+          <a class="report_more" @click="openMore(index)" v-if="event.hasMoreData != null && event.hasMoreData != ''">
+            <span>more</span>
+          </a>
+          <div class="bottomArrow"></div>
         </div>
         <div class="date_num" v-bind:class="{'big_num': date.flag == 1}">
           <span>{{date.text}}</span>
@@ -100,6 +100,7 @@
     height: 760px;
     position: relative;
   }
+
   .report_date {
     width: 8000px;
     height: 76%;
@@ -156,19 +157,20 @@
 
   .report_img {
     width: 200px;
-    height: 100%;
+    /*height: 100%;*/
     margin: auto;
+    padding-bottom: 5px;
   }
 
   .img_left {
-    float:left;
+    float: left;
     top: 0;
     width: 200px;
     margin: 5px;
   }
 
   .img_left_thin {
-    float:left;
+    float: left;
     top: 0;
     width: 150px;
     margin: 5px;
@@ -190,7 +192,7 @@
     background-image: url(../assets/more02.png);
     background-repeat: no-repeat;
     background-position: top right;
-    background-size:57px 22px;
+    background-size: 57px 22px;
     padding: 3px 0;
     margin-top: 5px;
     margin-bottom: 3px;
@@ -288,7 +290,7 @@
   li {
     font-weight: normal;
     padding-bottom: 6px !important;
-    list-style-type:none;
+    list-style-type: none;
   }
 
   .bottomArrow {
