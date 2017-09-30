@@ -1,12 +1,12 @@
 <template>
   <div class="more_data">
-    <div class="more-box" v-for="item in appData">
+    <div class="more-box">
       <div class="more-header">开发者平台部<span class="more-del" @click="delMore">X</span></div>
       <div class="more-contain">
-        <span class="more-title" v-show="item.title != null && item.title != ''">{{ item.title }}</span>
-        <span class="more-time" v-show="item.time != null && item.time != ''">{{ item.time }}</span>
-        <img :src="item.img" class="more-img" v-show="item.img != null && item.img != ''">
-        <li class="more-content" v-for="content in item.contents">{{content}}</li>
+        <span class="more-title" v-show="appList.title != null && appList.title != ''">{{ appList.title }}</span>
+        <span class="more-time" v-show="appList.time != null && appList.time != ''">{{ appList.time }}</span>
+        <img :src="appList.img" class="more-img" v-show="appList.img != null && appList.img != ''">
+        <li class="more-content" v-for="content in appList.contents">{{content}}</li>
       </div>
     </div>
   </div>
@@ -19,18 +19,21 @@
     data () {
       return {
         msg: '开发者平台部 Q3 汇报',
-        moreList: 0,
-        appData: appData
+        moreIndex: 0,
+        appData: appData,
+        appList: {}
       }
     },
     props: ['sequence'],
     created () {
       for (let i = 0; i < appData.length; i++) {
         if (appData[i].index === this.sequence) {
-          this.moreList = i
+          this.moreIndex = i
           break
         }
       }
+      this.appList = appData[this.moreIndex]
+      console.log(this.appList)
     },
     methods: {
       delMore () {
