@@ -105,6 +105,7 @@
     width: 8000px;
     height: 76%;
     color: #fff;
+    transition-timing-function: linear;
   }
 
   .date_info {
@@ -119,7 +120,7 @@
   .date_event {
     width: 210px;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 4px 4px 10px rgba(145, 145, 145, 0.8);
     position: relative;
   }
@@ -267,7 +268,7 @@
     height: 27px;
     line-height: 27px;
     word-wrap: break-word;
-    background-color: rgba(200, 200, 200, 0.5);
+    background-color: rgba(200, 200, 200, 0.6);
   }
 
   .big_info {
