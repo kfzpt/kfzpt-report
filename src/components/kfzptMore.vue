@@ -1,7 +1,7 @@
 <template>
   <div class="more_data">
     <div class="more-box">
-      <div class="more-header">开发者平台部<span class="more-del" @click="delMore">X</span></div>
+      <div class="more-header">开发者平台部<span class="more-close" @click="closeMore">X</span></div>
       <div class="more-contain">
         <span class="more-title" v-show="appList.title != null && appList.title != ''">{{ appList.title }}</span>
         <span class="more-time" v-show="appList.time != null && appList.time != ''">{{ appList.time }}</span>
@@ -40,7 +40,7 @@
       console.log(this.appList)
     },
     methods: {
-      delMore () {
+      closeMore () {
         this.$emit('close')
       },
       makeFull () {
@@ -100,7 +100,7 @@
     font-size: 18px;
   }
 
-  .more-del {
+  .more-close {
     width: 15px;
     color: #ccc;
     font-size: 15px;
